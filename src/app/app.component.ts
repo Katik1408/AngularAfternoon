@@ -15,17 +15,16 @@ export class AppComponent implements OnInit {
   submitted = false;
 
   //Angular Component LifeCycle
-
-  emailId;
-
-  password;
-
   ngOnInit() {
     //Initialization
     //FormBuilder
     this.loginForm = new FormGroup({
-      emailId: new FormControl('', Validators.required),
-      password: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(20)]),
+      emailId: new FormControl("", Validators.required),
+      password: new FormControl("", [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(20),
+      ]),
     });
   }
 
@@ -40,7 +39,7 @@ export class AppComponent implements OnInit {
   submit(data) {
     this.submitted = true;
 
-    if(this.loginForm.invalid){
+    if (this.loginForm.invalid) {
       return;
     }
 
