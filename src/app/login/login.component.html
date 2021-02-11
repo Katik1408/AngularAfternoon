@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Student</a>
   <button
     class="navbar-toggler"
@@ -27,7 +27,7 @@
     </ul>
     <span class="navbar-text"> Register </span>
   </div>
-</nav>
+</nav> -->
 <!--
   
     {
@@ -42,6 +42,9 @@
   <!-- Template Variable-->
   <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="card spacer">
+      <div class="card-header">
+        Template Driven Login Form
+      </div>
       <div class="row">
         <div class="col-md-6">
           <label for="email"> Email ID </label>
@@ -51,6 +54,7 @@
             type="email"
             #emailid="ngModel"
             name="emailId"
+            (change)="log(emailid)"
             [(ngModel)]="loginModel.emailId"
             class="form-control"
             required

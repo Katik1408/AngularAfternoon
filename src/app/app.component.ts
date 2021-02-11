@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import {
+  FormControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from "@angular/forms";
 
 @Component({
   selector: "app-root",
@@ -12,21 +17,40 @@ export class AppComponent implements OnInit {
   // name: string = 'default Name';
 
   loginForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {}
+
   submitted = false;
 
   //Angular Component LifeCycle
   ngOnInit() {
     //Initialization
     //FormBuilder
-    this.loginForm = new FormGroup({
-      emailId: new FormControl("", Validators.required),
-      password: new FormControl("", [
-        Validators.required,
-        Validators.minLength(6),
-        Validators.maxLength(20),
-      ]),
+
+    this.loginForm = this.formBuilder.group({
+      emailId: ["", Validators.required],
+      password: [
+        "",
+        [
+          Validators.required,
+          Validators.minLength(6),
+          Validators.maxLength(20),
+        ],
+      ],
     });
+
+    // this.loginForm = new FormGroup({
+    //   emailId: new FormControl("", Validators.required),
+    //   password: new FormControl("", [
+    //     Validators.required,
+    //     Validators.minLength(6),
+    //     Validators.maxLength(20),
+    //   ]),
+    // });
   }
+
+  //<a >Click </a>
+
 
   get f() {
     return this.loginForm.controls;

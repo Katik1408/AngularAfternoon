@@ -1,33 +1,14 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Student</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarText"
-    aria-controls="navbarText"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"
-          >Home <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-    </ul>
-    <span class="navbar-text"> Register </span>
-  </div>
-</nav> -->
+<app-nav-bar>
+</app-nav-bar>
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
 <!--
 
   {
@@ -38,9 +19,15 @@
 
 
 -->
-<!-- <div class="container">
+
+<!-- 
+
+<div class="container">
   <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
     <div class="card spacer">
+      <div class="card-header">
+        Reactive Form
+      </div>
       <div class="row">
         <div class="col-md-6">
           <label for="email"> Email ID </label>
@@ -56,7 +43,6 @@
             <div *ngIf="f.emailId.errors.required">Email id is required</div>
           </div>
         </div>
-      
       </div>
       <div class="row rowSpacer">
         <div class="col-md-6">
@@ -65,20 +51,21 @@
         <div class="col-md-6">
           <input
             formControlName="password"
-            
             id="pwd"
-            type="password" required
+            type="password"
+            required
             class="form-control"
-            [ngClass] = "{'is-invalid':submitted && f.password.errors}"
+            [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
           />
-          
+
           <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
             <div *ngIf="f.password.errors.required">Password is required</div>
-            <div *ngIf="f.password.errors.minlength || f.password.errors.maxlength">
+            <div
+              *ngIf="f.password.errors.minlength || f.password.errors.maxlength"
+            >
               Password should be in between 6 and 20 characters
             </div>
           </div>
-
         </div>
       </div>
       <div class="row rowSpacer">
@@ -89,5 +76,4 @@
     </div>
   </form>
 </div> -->
-
-<app-login></app-login>
+<!--<app-login></app-login> -->
