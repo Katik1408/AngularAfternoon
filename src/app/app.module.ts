@@ -7,6 +7,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { CategoryComponent } from './category/category.component';
 import { BackgroundDirective } from 'src/app/directives/background.directive';
+import { CustomifDirective } from './directives/customif.directive';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +17,9 @@ import { BackgroundDirective } from 'src/app/directives/background.directive';
     LoginComponent,
     CategoryComponent,
     BackgroundDirective,
+    CustomifDirective,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

@@ -1,0 +1,20 @@
+<div class="childBox">
+  <h2 style="border: 1px solid black">Child Component</h2>
+
+  <p>
+    {{ messagefromparent }}
+  </p>
+
+  <hr />
+
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="data"
+      class="form-control"
+      placeholder="Give data"
+    />
+    <br />
+    <button (click) = "sendData()" class="btn btn-primary">Send Data</button>
+  </div>
+</div>

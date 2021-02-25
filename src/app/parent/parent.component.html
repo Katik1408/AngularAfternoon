@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="parentBox">
+        <h2 style="border: 1px solid black">Parent Component</h2>
+        <input
+          type="text"
+          [(ngModel)]="username"
+          class="form-control"
+          placeholder="Type Username"
+        />
+
+        <br/>
+        <p>{{datafromchild}}</p>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-child
+        [messagefromparent]="username"
+        (messagetoparent)="recieveData($event)"
+      ></app-child>
+    </div>
+  </div>
+</div>
