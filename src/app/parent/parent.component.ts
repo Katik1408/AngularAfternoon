@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-parent',
@@ -10,11 +11,14 @@ export class ParentComponent implements OnInit {
 
   datafromchild;
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {}
 
   recieveData($event) {
     this.datafromchild = $event;
+  }
+  sendMessage() {
+    this.dataService.changeMessage(this.username);
   }
 }

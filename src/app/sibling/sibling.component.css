@@ -1,0 +1,7 @@
+.siblingBox{
+    padding :20px;
+    border : 2px solid rgb(0, 68, 255);
+    margin : 20px;
+    width: 500px;
+    height: 500px;
+}

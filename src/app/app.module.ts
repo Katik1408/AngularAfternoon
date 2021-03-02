@@ -10,6 +10,7 @@ import { BackgroundDirective } from 'src/app/directives/background.directive';
 import { CustomifDirective } from './directives/customif.directive';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { SiblingComponent } from './sibling/sibling.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { ChildComponent } from './parent/child/child.component';
     CustomifDirective,
     ParentComponent,
     ChildComponent,
+    SiblingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
