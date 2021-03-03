@@ -11,6 +11,7 @@ import { CustomifDirective } from './directives/customif.directive';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { SiblingComponent } from './sibling/sibling.component';
+import { Comp1Component } from './comp1/comp1.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { SiblingComponent } from './sibling/sibling.component';
     ParentComponent,
     ChildComponent,
     SiblingComponent,
+    Comp1Component,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

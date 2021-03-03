@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { CategoryComponent } from '../app/category/category.component';
 import { ParentComponent } from './parent/parent.component';
 import { SiblingComponent } from './sibling/sibling.component';
+import { Comp1Component } from './comp1/comp1.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,6 +20,10 @@ const routes: Routes = [
     path: 'sibling',
     component: SiblingComponent,
   },
+  {
+    path:'component1',
+    component:Comp1Component
+  }
 ];
 
 @NgModule({

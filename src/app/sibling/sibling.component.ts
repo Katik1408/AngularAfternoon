@@ -7,7 +7,9 @@ import { DataService } from '../services/data/data.service';
   styleUrls: ['./sibling.component.css'],
 })
 export class SiblingComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    
+  }
 
   message: string;
 

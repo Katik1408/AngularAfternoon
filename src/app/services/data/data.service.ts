@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class DataService  {
   private messageSource = new BehaviorSubject('Default');
   currentMessage = this.messageSource.asObservable();
   constructor() {}
