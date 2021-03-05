@@ -1,0 +1,51 @@
+<div class="container" style="margin-top: 20px">
+  <div class="card" style="padding: 15px">
+    <form #studentForm="ngForm" (ngSubmit)="submit(studentForm.value)">
+      <div class="row" style="margin: 20px">
+        <div class="col-md-12">
+          <input
+            type="text"
+            name="name"
+            #name 
+            [ngModel] = "name"
+            placeholder="Name"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row" style="margin: 20px">
+        <div class="col-md-12">
+          <input
+            type="text"
+            name="age"
+            #age
+            [ngModel] = "age"
+            placeholder="Age"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row" style="margin: 20px">
+        <div class="col-md-12">
+          <input
+            type="text"
+            name="place"
+            #place 
+            [ngModel] = "place"
+            placeholder="Place"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row" style="margin: 20px">
+        <div class="col-md-12">
+          <input
+            type="submit"
+            value="Create New Student"
+            class="btn btn-primary btn-block"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

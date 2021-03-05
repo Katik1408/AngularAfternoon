@@ -12,6 +12,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { SiblingComponent } from './sibling/sibling.component';
 import { Comp1Component } from './comp1/comp1.component';
+import { StudentComponent } from './student/student.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreatestudentComponent } from './student/createstudent/createstudent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +27,16 @@ import { Comp1Component } from './comp1/comp1.component';
     ChildComponent,
     SiblingComponent,
     Comp1Component,
+    StudentComponent,
+    CreatestudentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
